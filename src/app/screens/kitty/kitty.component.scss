@@ -1,0 +1,31 @@
+.kitty {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 4px #cfcfcf;
+
+    .cover {
+      height: 150px;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .name {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .color { 
+      border: 1px solid #cfcfcf;
+      padding: 2px 5px;
+      border-radius: 5px;
+      width: max-content;
+    }
+  }
+}

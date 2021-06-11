@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+/** Components */
 import { AppComponent } from './app.component';
 
+/** Modules */
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderModule } from './components/header/header.module';
+import { PuppyModule } from './screens/puppy/puppy.module';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    // imported
+    HeaderModule,
+    PuppyModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

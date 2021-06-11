@@ -1,0 +1,8 @@
+<div class="kitty">
+  <div *ngFor="let kit of kittiesList; index as i" class="card">
+    <img class="cover" src="{{ kit.cover }}" alt="cat" />
+    <!-- <img class="cover" [src]="kit" alt="cat" /> -->
+    <span class="name">{{ i + 1 }} - {{ kit.name }}</span>
+    <span *ngIf="kit.color" class="color">{{ kit.color }}</span>
+  </div>
+</div>

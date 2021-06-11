@@ -1,0 +1,26 @@
+<h1>-- BINDING PARTY --</h1>
+
+<pre>Default value: {{ puppy.name }}</pre>
+
+<!-- CLASS =====> HTML  -->
+<div id="up">
+  <label for="bindingUp">Class to HTML: </label>
+  <input type="text" id="bindingUp" [ngModel]="puppy.name" />
+</div>
+
+<!-- HTML =====> CLASS  -->
+<div id="down">
+  <label for="bindingDown">HTML to Class: </label>
+  <input
+    type="text"
+    id="bindingDown"
+    ngModel=""
+    (ngModelChange)="puppy.name = $event"
+  />
+</div>
+
+<!-- TWO WAYS BINDING  -->
+<div id="2ways">
+  <label for="2wInput">HTML to Class: </label>
+  <input type="text" id="2wInput" [(ngModel)]="puppy.name" />
+</div>
