@@ -1,0 +1,51 @@
+<div class="quote">
+  <div class="tabs">
+    <div class="tabs-button">
+      <button (click)="tabIndex = 0" [class.active]="tabIndex === 0">
+        Dog
+      </button>
+      
+      <button (click)="tabIndex = 1" [class.active]="tabIndex === 1">
+        Cat
+      </button>
+    </div>
+
+    <!-- DOG TAB  -->
+    <div *ngIf="tabIndex === 0; else catTab">
+      <div class="tab-dog">
+        -- Dog quotes --
+        <ul>
+          <li *ngFor="let dog of dogQuotes">
+            <div class="content">
+              <strong>{{ dog.content }}</strong>
+              <em>{{ dog.author }}</em>
+            </div>
+            <bookmark
+              [interaction]="dog"
+              (clickBookmark)="clickBookmark($event)"
+            ></bookmark>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CAT TAB  -->
+    <ng-template #catTab>
+      <div class="tab-cat">
+        -- Cat quotes --
+        <ul>
+          <li *ngFor="let cat of catQuotes">
+            <div class="content">
+              <strong>{{ cat.content }}</strong>
+              <em>{{ cat.author }}</em>
+            </div>
+            <bookmark
+              [interaction]="cat"
+              (clickBookmark)="clickBookmark($event)"
+            ></bookmark>
+          </li>
+        </ul>
+      </div>
+    </ng-template>
+  </div>
+</div>

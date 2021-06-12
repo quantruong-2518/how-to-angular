@@ -11,13 +11,18 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'kitty',
+    path: 'kitties',
     loadChildren: () =>
       import('./screens/kitty/kitty.module').then((m) => m.KittyModule),
   },
   {
-    path: 'puppy',
+    path: 'puppies',
     component: PuppyComponent,
+  },
+  {
+    path: 'quotes',
+    loadChildren: () =>
+      import('./screens/quote/quote.module').then((m) => m.QuoteModule),
   },
 ];
 

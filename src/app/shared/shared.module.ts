@@ -16,4 +16,5 @@ const IMPORT_MODULES = [FormsModule, ReactiveFormsModule];
   imports: [...IMPORT_MODULES],
   exports: [...EXPORT_MODULES],
 })
+
 export class SharedModule {}

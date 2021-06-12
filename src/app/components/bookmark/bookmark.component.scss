@@ -1,0 +1,8 @@
+.bookmark {
+  color: darkgray;
+  cursor: pointer;
+
+  &.noted {
+    color: cornflowerblue;
+  }
+}

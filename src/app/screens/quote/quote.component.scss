@@ -1,0 +1,44 @@
+.quote {
+  .tabs {
+    &-button {
+      margin: 15px 0;
+      border-bottom: 0.5px solid #cfcfcf;
+
+      button {
+        margin-right: 5px;
+        background: transparent;
+        border-bottom: transparent;
+        padding: 4px 30px;
+        border-color: aliceblue;
+        cursor: pointer;
+
+        &.active {
+          border-color: lightgray;
+          color: white;
+          background: steelblue;
+        }
+      }
+    }
+
+    .tab {
+      &-dog,
+      &-cat {
+        ul > li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.5rem;
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            > span {
+              font-size: 0.25rem;
+              color: gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
